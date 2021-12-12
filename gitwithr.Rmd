@@ -1,0 +1,27 @@
+---
+title: "Git with R"
+output: html_notebook
+---
+
+This notebook follows the steps in https://happygitwithr.com/
+
+We start the notebook when we get to this point: https://happygitwithr.com/https-pat.html and generate a token...
+
+```{r generate token}
+#this just opens your browser at https://github.com/settings/tokens/new
+usethis::create_github_token()
+```
+
+## Use `gitcreds`
+
+We use the `gitcreds` package to prompt us to enter the PAT (Personal Access Token).
+
+This needs to be entered in the console below when prompted.
+
+
+```{r activate gitcreds}
+#install.packages("gitcreds")
+#library(gitcreds)
+gitcreds::gitcreds_set()
+```
+
